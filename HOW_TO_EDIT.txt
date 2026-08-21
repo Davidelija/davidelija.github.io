@@ -1,0 +1,39 @@
+DAVID ELIJAH UMARU — PORTFOLIO (source files)
+================================================
+
+FILES
+  index.html    -> page structure (nav, hero, section shells)
+  styles.css    -> all colors, fonts, spacing, layout (dark theme, teal/amber accents)
+  script.js     -> all page CONTENT lives here (experience, projects, leadership,
+                    awards) as JS data arrays, plus the filter/toggle/nav logic
+  assets/resumes/ -> your three tailored resume PDFs, linked from the Resume section
+
+HOW TO PREVIEW LOCALLY
+  1. Easiest: double-click index.html to open it in your browser.
+  2. For a proper local server (needed if you add videos later):
+       - Open a terminal in this folder
+       - Run: python3 -m http.server 8000
+       - Visit: http://localhost:8000
+
+HOW TO EDIT CONTENT
+  - Almost everything you'll want to change lives in script.js, at the top:
+      EXPERIENCE   -> your jobs (title, org, date, bullets)
+      PROJECTS     -> each project has: title, tags (software/automotive/embedded),
+                       period, stack, summary, background, approach[], results
+      LEADERSHIP   -> leadership roles
+      AWARDS       -> awards/scholarships
+  - Contact email/LinkedIn and the hero text live directly in index.html.
+  - Project "tags" control which filter buttons show a card — a project can have
+    more than one tag (e.g. ["automotive", "embedded"]).
+
+ADDING PHOTOS
+  - Drop image files into assets/ (e.g. assets/projects/rr26ev.jpg).
+  - Add an <img> or update a project card in script.js's renderProjects() function
+    to reference the file. Currently the site is text/icon-only, no photos required.
+
+PUBLISHING (make it live for anyone to view)
+  - GitHub Pages (free): create a repo named yourusername.github.io, push this
+    whole folder's contents to it, enable Pages in repo Settings — live in a
+    few minutes at https://yourusername.github.io
+  - Netlify / Vercel (free, no git needed): drag-and-drop this folder for an
+    instant public URL.
