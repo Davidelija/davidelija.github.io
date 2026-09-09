@@ -281,6 +281,24 @@ function initFilters() {
   });
 }
 
+/* ============ Theme toggle ============ */
+function initThemeToggle() {
+  const root = document.documentElement;
+  const toggle = document.getElementById("themeToggle");
+
+  const syncPressed = () => {
+    toggle.setAttribute("aria-pressed", root.getAttribute("data-theme") === "light" ? "true" : "false");
+  };
+  syncPressed();
+
+  toggle.addEventListener("click", () => {
+    const next = root.getAttribute("data-theme") === "light" ? "dark" : "light";
+    root.setAttribute("data-theme", next);
+    localStorage.setItem("theme", next);
+    syncPressed();
+  });
+}
+
 /* ============ Mobile nav ============ */
 function initMobileNav() {
   const toggle = document.getElementById("navToggle");
@@ -318,6 +336,7 @@ document.addEventListener("DOMContentLoaded", () => {
   renderProjects("all");
   renderLeadership();
   initFilters();
+  initThemeToggle();
   initMobileNav();
   initReveal();
   initActiveNav();
