@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>David Elijah Umaru — Computer Engineer</title>
-<meta name="description" content="David Elijah Umaru — Computer Engineering senior at Colorado State University. Embedded systems, automotive electronics, and software engineering.">
+<meta name="description" content="David Elijah Umaru — Computer Engineering M.S. student at Colorado State University. Embedded systems, automotive electronics, and software engineering.">
 <script>
 (function() {
   var stored = localStorage.getItem("theme");
@@ -55,9 +55,9 @@
 <main>
   <section id="top" class="hero">
     <div class="hero-inner">
-      <p class="kicker">Computer Engineering &middot; Colorado State University &middot; Class of 2026</p>
+      <p class="kicker">Computer Engineering &middot; Colorado State University &middot; M.S. Candidate, 2028</p>
       <h1>David Elijah Umaru builds <span class="accent">real-time systems</span> where hardware meets code.</h1>
-      <p class="hero-sub">Embedded firmware, automotive electronics, and control software — from a 1kHz motor-control loop on a quadrupedal robot to the low-voltage architecture of a Formula SAE electric race car. Graduating May 2026, applying to graduate study in Computer Engineering.</p>
+      <p class="hero-sub">Embedded firmware, automotive electronics, and control software — from a 1kHz motor-control loop on a quadrupedal robot to the low-voltage architecture of a Formula SAE electric race car. Now an M.S. student researching cybersecurity of EV DC fast-charging systems.</p>
       <div class="track-chips">
         <span class="chip c-software">Software Development</span>
         <span class="chip c-automotive">Automotive Electronics</span>
@@ -68,29 +68,34 @@
         <a href="#resumes" class="btn btn-ghost">Download Resume</a>
       </div>
     </div>
-    <svg class="hero-visual" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <g stroke="#5eead4" stroke-opacity="0.35" stroke-width="1.5">
-        <path d="M50 120 H200 V60 H420"/>
-        <path d="M50 220 H140 V320 H320 V220 H450"/>
-        <path d="M100 400 H250 V460"/>
-        <path d="M380 60 V180 H460"/>
-        <path d="M200 60 V20"/>
+    <svg class="hero-visual" viewBox="20 30 480 420" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <path id="trackPath" d="M140 400 H340 C410 400 450 360 450 300 C450 240 400 220 360 240 C320 260 290 250 280 210 L262 130 C250 80 200 60 160 80 C112 104 100 150 120 190 C135 220 122 250 92 272 C52 302 62 400 140 400 Z"/>
+      </defs>
+      <!-- track: edge, asphalt, center line -->
+      <use href="#trackPath" class="track-edge"/>
+      <use href="#trackPath" class="track-surface"/>
+      <use href="#trackPath" class="track-center"/>
+      <!-- start / finish line -->
+      <g class="track-start">
+        <rect x="236" y="386" width="7" height="7"/><rect x="243" y="393" width="7" height="7"/>
+        <rect x="236" y="400" width="7" height="7"/><rect x="243" y="407" width="7" height="7"/>
       </g>
-      <g fill="#5eead4">
-        <circle cx="50" cy="120" r="5"/>
-        <circle cx="200" cy="60" r="5"/>
-        <circle cx="420" cy="60" r="5"/>
-        <circle cx="50" cy="220" r="5"/>
-        <circle cx="320" cy="220" r="5"/>
-        <circle cx="450" cy="220" r="5"/>
-        <circle cx="100" cy="400" r="5"/>
-        <circle cx="250" cy="460" r="5"/>
-        <circle cx="380" cy="180" r="5"/>
-        <circle cx="460" cy="180" r="5"/>
-      </g>
-      <g fill="none" stroke="#7dd3fc" stroke-opacity="0.5" stroke-width="1.5">
-        <rect x="150" y="220" width="60" height="40" rx="4"/>
-        <rect x="330" y="330" width="55" height="35" rx="4"/>
+      <!-- car (points along +x so it faces the direction of travel) -->
+      <g class="track-car">
+        <g transform="scale(1.35)">
+        <rect x="-14" y="-9" width="7" height="4" rx="1" class="car-wheel"/>
+        <rect x="-14" y="5" width="7" height="4" rx="1" class="car-wheel"/>
+        <rect x="6" y="-8" width="6" height="3.5" rx="1" class="car-wheel"/>
+        <rect x="6" y="4.5" width="6" height="3.5" rx="1" class="car-wheel"/>
+        <path d="M-16 -4 L4 -4 L16 -1.5 L16 1.5 L4 4 L-16 4 Z" class="car-body"/>
+        <rect x="-18" y="-7" width="3" height="14" rx="1" class="car-body"/>
+        <rect x="15" y="-6" width="2.5" height="12" rx="1" class="car-body"/>
+        <circle cx="-3" cy="0" r="2.4" class="car-cockpit"/>
+        </g>
+        <animateMotion dur="9s" repeatCount="indefinite" rotate="auto">
+          <mpath href="#trackPath"/>
+        </animateMotion>
       </g>
     </svg>
   </section>
@@ -100,11 +105,11 @@
       <div class="section-head"><span class="section-num">01</span><h2 class="section-title">About</h2></div>
       <div class="about-grid">
         <div class="about-text">
-          <p>I'm a final-year Computer Engineering student at Colorado State University, minoring in Computer Science with an Embedded Systems concentration. My work sits at the intersection of hardware and software — I like projects where a control loop, a PCB, and a line of firmware all have to work together correctly, in real time.</p>
-          <p>Over the past two years I've led the low-voltage electrical architecture for CSU's Formula SAE electric vehicle program, rewritten the real-time motor-control firmware for a 12-motor quadrupedal robot, and supported the university's high-performance computing infrastructure as an HPC developer intern. I'm graduating in May 2026 and applying to graduate programs in Computer Engineering.</p>
+          <p>I'm a Computer Engineering M.S. student at Colorado State University, where I also earned my B.S. in Computer Engineering (Embedded Systems concentration, Computer Science minor) in May 2026. My work sits at the intersection of hardware and software — I like projects where a control loop, a PCB, and a line of firmware all have to work together correctly, in real time.</p>
+          <p>From 2024 to 2026 I led the low-voltage electrical architecture for CSU's Formula SAE electric vehicle program, rewritten the real-time motor-control firmware for a 12-motor quadrupedal robot, and supported the university's high-performance computing infrastructure as an HPC developer intern. I now do graduate research on the cybersecurity of EV DC fast-charging systems in Dr. Jeremy Daily's lab and teach analog circuit labs as a graduate teaching assistant.</p>
         </div>
         <div class="stat-cards">
-          <div class="stat-card"><div class="num">3.94</div><div class="label">GPA / 4.0, Dean's List x6</div></div>
+          <div class="stat-card"><div class="num">3.92</div><div class="label">B.S. GPA / 4.0, Dean's List x6</div></div>
           <div class="stat-card"><div class="num">10+</div><div class="label">Major projects shipped</div></div>
           <div class="stat-card"><div class="num">3</div><div class="label">FSAE vehicles supported</div></div>
           <div class="stat-card"><div class="num">2yrs</div><div class="label">Electrical leadership, Ram Racing</div></div>
@@ -155,7 +160,7 @@
           <h3>Tools &amp; Frameworks</h3>
           <div class="skill-pills">
             <span class="pill">Linux</span><span class="pill">Git / GitHub</span><span class="pill">Flask</span><span class="pill">TensorFlow / TFLite</span>
-            <span class="pill">MQTT</span><span class="pill">Node-RED</span><span class="pill">Quartus Prime</span><span class="pill">Onshape</span>
+            <span class="pill">MQTT</span><span class="pill">Node-RED</span><span class="pill">Quartus Prime</span>
           </div>
         </div>
       </div>
@@ -189,8 +194,8 @@
           <a href="assets/resumes/David_Umaru_Resume_Software.pdf" target="_blank" rel="noopener">Download PDF &rarr;</a>
         </div>
         <div class="resume-card">
-          <div class="rt">Automotive</div>
-          <div class="rd">Two years leading FSAE electric-vehicle electrical systems — CAN architecture, safety PCBs, wiring harnesses.</div>
+          <div class="rt">Automotive &amp; EV Charging Security</div>
+          <div class="rd">Graduate research in EV charging cybersecurity plus two years on FSAE electric-vehicle electrical systems: CAN networks, safety circuits, wiring harnesses.</div>
           <a href="assets/resumes/David_Umaru_Resume_Automotive.pdf" target="_blank" rel="noopener">Download PDF &rarr;</a>
         </div>
         <div class="resume-card">
@@ -205,7 +210,7 @@
   <section id="contact" class="section contact reveal">
     <div class="wrap">
       <div class="section-head"><span class="section-num">07</span><h2 class="section-title">Contact</h2></div>
-      <p class="section-lede">Open to entry-level and graduate-research opportunities in embedded systems, automotive electronics, and software engineering.</p>
+      <p class="section-lede">Open to internships and graduate-research opportunities in embedded systems, automotive electronics, and software engineering.</p>
       <div class="contact-links">
         <a href="mailto:elijahumaruwork@gmail.com">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M4 6l8 7 8-7"/></svg>

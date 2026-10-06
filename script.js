@@ -1,13 +1,33 @@
 /* ============ Data ============ */
 const EXPERIENCE = [
   {
+    title: "Graduate Researcher",
+    org: "Heavy Vehicle Cybersecurity Lab (Dr. Jeremy Daily), Colorado State University",
+    date: "Aug 2026 – Present",
+    bullets: [
+      "Conducting graduate research on the cybersecurity of DC fast-charging systems for electric vehicles.",
+      "Practiced CAN message injection and introductory fuzzing on a vehicle network testbed to study how control units respond to unexpected or malicious traffic.",
+      "Participated in the CyberAuto Challenge and CyberTractor, hands-on vehicle cybersecurity training events."
+    ]
+  },
+  {
+    title: "Graduate Teaching Assistant, ECE 205 Analog Circuit Design",
+    org: "Department of Electrical & Computer Engineering, Colorado State University",
+    date: "Aug 2026 – Present",
+    bullets: [
+      "Lead weekly labs for about 60 students, teaching hands-on use of oscilloscopes, function generators and multimeters.",
+      "Troubleshoot student circuits at the bench, coaching students to isolate wiring and component faults step by step.",
+      "Grade lab reports and give written feedback on measurement accuracy and comparison to theoretical predictions."
+    ]
+  },
+  {
     title: "HPC Developer Intern",
     org: "Data Science Research Institute, Colorado State University",
-    date: "June 2025 – Present",
+    date: "June 2025 – Aug 2026",
     bullets: [
-      "Supported and troubleshot high-availability Linux/HPC systems, improving computational reliability and reducing researcher downtime.",
-      "Assisted with system validation and commissioning during a new HPC data-center rebuild, including configuration checks and operational testing.",
-      "Authored and maintained internal technical documentation (GitHub, Read the Docs, Freshservice), improving support efficiency ~50%.",
+      "Diagnosed and resolved Linux system and job-scheduling issues for researchers on the university's high-performance computing cluster.",
+      "Verified server configurations and ran operational tests while commissioning new hardware during an HPC cluster rebuild.",
+      "Wrote user guides and troubleshooting docs (GitHub, Read the Docs), improving support efficiency by about 50%.",
       "Trained faculty and students on Linux command-line workflows and job scheduling."
     ]
   },
@@ -33,19 +53,19 @@ const EXPERIENCE = [
 
 const PROJECTS = [
   {
-    title: "Formula SAE Ram Racing (RR26EV) — Low Voltage Electrical Lead",
+    title: "Formula SAE Ram Racing (RR26EV) — Electrical Team Member, former Low Voltage Electrical Lead",
     tags: ["automotive", "embedded"],
     period: "Sept 2024 – Present",
     stack: "KiCad · CAN bus / DBC · MATLAB/Simulink · Deutsch & Amphenol connectors",
-    summary: "Complete low-voltage electrical architecture, custom safety PCBs, and wiring harnesses for CSU's first competition FSAE electric vehicle.",
+    summary: "Low-voltage electrical system, CAN network, and wiring harnesses for CSU's first competition Formula SAE electric vehicle.",
     background: "Ram Racing's first-year EV platform required a complete low-voltage electrical architecture from scratch — no existing infrastructure for 400V tractive-system integration, safety monitoring, or vehicle control.",
     approach: [
-      "Designed a 12V architecture with 6 independently-fused channels and a 500kbps CAN bus network (7 nodes, custom DBC file) integrating the motor controller, BMS, IMD, BSPD, and VCU.",
-      "Designed 3 custom PCBs (power distribution, signal conditioning, fault-latch) in KiCad with IPC-2221-compliant trace widths.",
+      "Designed a 12V low-voltage system with 6 independently fused channels and a 500 kbps CAN network with a custom message database, connecting the vehicle control unit, motor controller and battery management system.",
+      "Designed the power distribution PCB and the fault-latch PCB and its latching logic in KiCad, then integrated and tested the fault latch with the insulation monitoring device and brake system plausibility device in the shutdown circuit.",
       "Engineered and fabricated 5 wiring harness assemblies (85m of wire, 120+ crimped connections) to FSAE T.9.2.2 specs.",
-      "Developed vehicle control logic (MATLAB/Simulink) interfacing the New Eagle RCM120, EMRAX resolver, and PM150DX-SP motor controller."
+      "Developed vehicle control logic in MATLAB/Simulink for the New Eagle RCM120 control unit and the motor controller."
     ],
-    results: "Passed FSAE 2026 compliance review at 95% on first submission. Cut hardware cost ~$1,300 vs. commercial alternatives, achieved <5ms shutdown response time, and passed a 10-hour endurance test with zero CAN errors. Trained 10+ new electrical team members."
+    results: "Delivered the low-voltage electrical system for the program's first competition EV build and secured a New Eagle hardware sponsorship. Currently mentoring two new electrical team members."
   },
   {
     title: "Rubicon — Electrical Lead, FSAE EV Prototype",
@@ -56,7 +76,7 @@ const PROJECTS = [
     background: "Ram Racing was expanding from IC-only to dual IC/EV competition. The team needed a functional prototype to validate electrical architecture and train members on HV safety before the competition build.",
     approach: [
       "Designed and fabricated the complete low-voltage wiring harness and a CAN-based driver dashboard (battery voltage, motor temp, torque, faults).",
-      "Built a benchtop powertrain test stand (E-stop, precharge circuit, CAN fault-injection framework) to validate motor-controller startup sequencing and thermal derating.",
+      "Built a benchtop powertrain test stand (E-stop, precharge circuit, basic CAN fault injection) to validate motor-controller startup sequencing and thermal derating.",
       "Calibrated motor-controller current limits and acceleration curves."
     ],
     results: "Delivered a functional EV prototype; established LV harness routing standards, CAN protocols, and motor calibration baselines adopted for the 2025-26 competition build."
@@ -175,9 +195,9 @@ const PROJECTS = [
 ];
 
 const LEADERSHIP = [
-  { title: "Electrical Low Voltage Lead", org: "CSU Formula SAE Electric", date: "2025 – 2026", desc: "Led a 7+ engineer electrical team through the program's first competition EV build; secured a New Eagle sponsorship." },
+  { title: "Electrical Low Voltage Lead (former)", org: "CSU Formula SAE Electric", date: "2025 – 2026", desc: "Led a 7+ engineer electrical team through the program's first competition EV build; secured a New Eagle sponsorship." },
   { title: "Electrical Systems Lead", org: "CSU FSAE EV Electric", date: "2024 – 2025", desc: "Led harness design and motor calibration; cut a 6-week timeline to 2 weeks before Vehicle Reveal." },
-  { title: "Safety Officer", org: "RamBots, CSU Senior Design", date: "2025 – 2026", desc: "Owned safety protocols and documentation for a 13-person multidisciplinary team." },
+  { title: "Safety Officer", org: "RamBots, CSU Senior Design", date: "2025 – 2026", desc: "Wrote safety procedures and documentation for a 13-person multidisciplinary team." },
   { title: "Ram Welcome Leader", org: "Colorado State University", date: "Summer 2024", desc: "Mentored a group of 20 incoming students through campus transition." },
   { title: "Member", org: "National Society of Black Engineers & ColorStack", date: "2023 – 2026", desc: "" }
 ];
@@ -341,3 +361,11 @@ document.addEventListener("DOMContentLoaded", () => {
   initReveal();
   initActiveNav();
 });
+
+/* ============ Hero car: pause for reduced-motion users ============ */
+(function () {
+  var svg = document.querySelector(".hero-visual");
+  if (svg && window.matchMedia("(prefers-reduced-motion: reduce)").matches && svg.pauseAnimations) {
+    svg.pauseAnimations();
+  }
+})();

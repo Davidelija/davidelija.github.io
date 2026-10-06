@@ -264,9 +264,9 @@ html[data-theme="light"] .theme-toggle .icon-moon { display: block; }
 
 .hero-visual {
   position: absolute;
-  right: -60px;
-  top: -40px;
-  width: 560px;
+  right: 24px;
+  top: 10px;
+  width: 470px;
   max-width: 60vw;
   opacity: 0.9;
   z-index: 1;
@@ -275,6 +275,16 @@ html[data-theme="light"] .theme-toggle .icon-moon { display: block; }
 @media (max-width: 900px) {
   .hero-visual { display: none; }
 }
+
+/* Hero race track (colors follow the light/dark theme variables) */
+.hero-visual .track-edge { stroke: var(--border); stroke-width: 40; stroke-linejoin: round; }
+.hero-visual .track-surface { stroke: var(--surface-2); stroke-width: 34; stroke-linejoin: round; }
+.hero-visual .track-center { stroke: var(--accent); stroke-opacity: 0.45; stroke-width: 1.5; stroke-dasharray: 8 10; }
+.hero-visual .track-start rect { fill: var(--text); fill-opacity: 0.7; }
+.hero-visual .car-body { fill: var(--accent); }
+.hero-visual .car-wheel { fill: var(--text); }
+.hero-visual .car-cockpit { fill: var(--bg); }
+
 
 /* ============ Sections ============ */
 .section { padding: 84px 0; }
